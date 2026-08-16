@@ -1,0 +1,98 @@
+
+/* Custom CSS para estilização em Dark Mode do Streamlit */
+
+/* Configuração do fundo principal e fontes de todo o site */
+.stApp {
+    background-color: #0F172A; /* Um azul-escuro ardósia elegante, em vez do preto comum */
+    color: #F8FAFC;            /* Texto na cor branca suave para não cansar a vista */
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Espaçamento do título principal */
+.main-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #1E293B; /* Linha sutil de divisão */
+}
+
+/* Efeito de texto com gradiente colorido (azul para roxo) */
+.gradient-text {
+    background: -linear-gradient(90deg, #3B82F6 0%, #8B5CF6 100%);
+    -webkit-background-clip: text;
+    background-clip: text; /* Adicione esta linha padrão */
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+
+/* Estilo padrão para todos os cartões de resultado (KPIs) */
+.kpi-card {
+    background-color: #1E293B; /* Fundo do cartão ligeiramente mais claro que o fundo do site */
+    border: 1px solid #334155; /* Borda sutil */
+    border-radius: 12px;        /* Bordas arredondadas modernas */
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /* Sombra leve atrás do cartão */
+    transition: transform 0.2s, border-color 0.2s;  /* Suaviza a animação de passar o mouse */
+    margin-bottom: 1rem;
+}
+
+/* Efeito de micro-animação: quando o mouse passa em cima do cartão */
+.kpi-card:hover {
+    transform: translateY(-2px); /* O cartão "flutua" 2 pixels para cima */
+    border-color: #475569;       /* A borda fica um pouco mais clara */
+}
+
+/* Cores das bordas laterais esquerdas dos cartões para dar destaque */
+.card-without-ipi {
+    border-left: 4px solid #64748B; /* Cinza para o valor neutro sem IPI */
+}
+
+.card-ipi {
+    border-left: 4px solid #8B5CF6; /* Roxo para o valor do imposto */
+}
+
+.card-with-ipi {
+    border-left: 4px solid #10B981; /* Verde para o valor total final */
+}
+
+/* Estilo do título interno de cada cartão */
+.kpi-card h3 {
+    margin: 0 0 0.5rem 0 !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    color: #94A3B8 !important;
+}
+
+/* Tamanho e peso das fontes dos números calculados */
+.kpi-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+/* Cores específicas dos números dos cartões */
+.value-ipi {
+    color: #A78BFA; /* Roxo claro */
+}
+
+.value-total {
+    color: #34D399; /* Verde claro */
+}
+
+/* Legenda pequena no rodapé dos cartões */
+.kpi-label {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #64748B;
+}
+
+/* Ajuste de cor do painel lateral (Sidebar) do Streamlit */
+div[data-testid="stSidebar"] {
+    background-color: #0F172A !important;
+    border-right: 1px solid #1E293B;
+}
+
+div[data-testid="stSidebar"] h3 {
+    color: #F8FAFC !important;
+}
